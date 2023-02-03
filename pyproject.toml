@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ucs"
+name = "ucloudstorage"
 version = "0.1.0"
 description = ""
 authors = ["Breno Moura <breno.mm@outlook.com>"]

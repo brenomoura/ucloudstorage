@@ -3,8 +3,11 @@ import os
 
 from aiobotocore.session import get_session
 
-from ucs.base import Driver
-from ucs.drivers.amazon.exceptions import S3FileUploadError, S3FileDeleteError
+from ucloudstorage.base import Driver
+from ucloudstorage.drivers.amazon.exceptions import (
+    S3FileUploadError,
+    S3FileDeleteError,
+)
 
 logger = logging.getLogger(__name__)
 

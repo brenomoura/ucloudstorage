@@ -3,8 +3,11 @@ from unittest.mock import patch, MagicMock
 
 import pytest
 
-from ucs.drivers.amazon.exceptions import S3FileUploadError, S3FileDeleteError
-from ucs.drivers.amazon.s3 import AmazonS3
+from ucloudstorage.drivers.amazon.exceptions import (
+    S3FileUploadError,
+    S3FileDeleteError,
+)
+from ucloudstorage.drivers.amazon.s3 import AmazonS3
 
 
 @patch.object(os, "getenv")
@@ -25,7 +28,7 @@ def test_initiate_driver(mock_getenv):
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_upload_file__success(
     mock_getenv, mock_get_session
@@ -59,7 +62,7 @@ async def test_amazon_s3_driver_upload_file__success(
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_upload_file__error_status_code(
     mock_getenv, mock_get_session
@@ -79,7 +82,7 @@ async def test_amazon_s3_driver_upload_file__error_status_code(
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_upload_file__exception_error(
     mock_getenv, mock_get_session
@@ -99,7 +102,7 @@ async def test_amazon_s3_driver_upload_file__exception_error(
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_delete_file__success(
     mock_getenv, mock_get_session
@@ -131,7 +134,7 @@ async def test_amazon_s3_driver_delete_file__success(
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_delete_file__status_code_error(
     mock_getenv, mock_get_session
@@ -153,7 +156,7 @@ async def test_amazon_s3_driver_delete_file__status_code_error(
 
 
 @pytest.mark.asyncio
-@patch("ucs.drivers.amazon.s3.get_session")
+@patch("ucloudstorage.drivers.amazon.s3.get_session")
 @patch.object(os, "getenv", return_value=False)
 async def test_amazon_s3_driver_delete_file__exception_error(
     mock_getenv, mock_get_session
