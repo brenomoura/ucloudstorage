@@ -3,12 +3,12 @@ from abc import ABC, abstractmethod
 
 class Driver(ABC):
     def __init__(
-            self,
-            key: str = None,
-            secret: str = None,
-            region: str = None,
-            *args,
-            **kwargs
+        self,
+        key: str = None,
+        secret: str = None,
+        region: str = None,
+        *args,
+        **kwargs
     ):
         self.key = key
         self.secret = secret
