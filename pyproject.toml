@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "ucloudstorage"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Breno Moura <breno.mm@outlook.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.7"
 aiobotocore = "^2.4.2"
 pytest = "^7.2.1"
 pytest-asyncio = "^0.20.3"
