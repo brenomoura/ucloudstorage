@@ -17,7 +17,7 @@ class Driver(ABC):
     @abstractmethod
     def upload_file(self, file, file_path: str) -> str:
         """
-        
+        Upload file to storage
         :return: uploaded file URL
         """
         raise NotImplementedError
@@ -29,5 +29,3 @@ class Driver(ABC):
         :return:
         """
         raise NotImplementedError
-
-
